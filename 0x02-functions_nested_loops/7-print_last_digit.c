@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "main.h"
 
 /**
@@ -8,7 +9,7 @@
  */
 int print_last_digit(int n)
 {
-	int last = _abs(n % 10);
+	int last = abs(n % 10);
 
 	_putchar(last);
 	return (last);
