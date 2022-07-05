@@ -3,6 +3,7 @@
 
 /**
  * _islower - checks if char is lowercase or uppercase.
+ * @c: The input char
  *
  * Return: 1 if true, 0 if false
  */
@@ -10,9 +11,9 @@ int _islower(int c)
 {
 	int check;
 
-	if(islower(c) == 0)
+	if (islower(c) == 0)
 		check = 0;
 	else
 		check = 1;
-	return check;
+	return (check);
 }
