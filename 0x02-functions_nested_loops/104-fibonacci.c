@@ -8,7 +8,7 @@
 int main(void)
 {
 	int i;
-	unsigned long long int j = 1, k = 2, m = j + k, n = m;
+	uint64_t j = 1, k = 2, m = j + k, n = m;
 
 	printf("%llu, %llu, ", j, k);
 
