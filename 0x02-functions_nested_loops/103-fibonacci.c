@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	int i;
+	int i, j;
 	long int fibonacci[5000];
 	long int sum = 0;
 
@@ -18,7 +18,6 @@ int main(void)
 	for (i = 2; i < 5000; i++)
 		fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
 	
-	int j;
 
 	for (j = 0; j < 5000; j++)
 	{
