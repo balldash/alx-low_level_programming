@@ -17,7 +17,6 @@ int main(void)
 
 	for (i = 2; i < 5000; i++)
 		fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
-	
 
 	for (j = 0; j < 5000; j++)
 	{
@@ -27,4 +26,5 @@ int main(void)
 			sum = sum + fibonacci[j];
 	};
 	printf("%ld\n", sum);
+	return (0);
 }
