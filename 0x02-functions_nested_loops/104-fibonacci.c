@@ -20,7 +20,7 @@ int main(void)
 		if (i == 97)
 			printf("%ld\n", fibonacci[i]);
 		else
-			printf("%ld\n", fibonacci[i]);
+			printf("%ld, ", fibonacci[i]);
 	}
 	return (0);
 }
