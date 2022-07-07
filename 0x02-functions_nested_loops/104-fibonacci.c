@@ -8,16 +8,16 @@
 int main(void)
 {
 	int i;
-	uint64_t j = 1, k = 2, m = j + k, n = m;
+	unsigned long int j = 1, k = 2, m = j + k, n = m;
 
-	printf("%llu, %llu, ", j, k);
+	printf("%lu, %lu, ", j, k);
 
 	for (i = 1; i < 97; i++)
 	{
 		if (i == 97)
-			printf("%llu\n", n);
+			printf("%lu\n", n);
 		else
-			printf("%llu, ", n);
+			printf("%lu, ", n);
 		n = m + k;
 		k = m;
 		m = n;
