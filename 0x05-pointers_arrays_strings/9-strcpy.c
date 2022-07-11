@@ -8,9 +8,16 @@
  */
 char *_strcopy(char *dest, char *src)
 {
-	char *holder = dest;
+	int len = 0;
+	int i;
 
-	while (*src)
-		*dest++ = *src++;
-	return (holder);
+	while (src != '\0')
+	{
+		len++;
+		src++;
+	}
+	
+	for (i = 0; i <= len; i++)
+		dest[i] = src[i];
+	return (dest);
 }
