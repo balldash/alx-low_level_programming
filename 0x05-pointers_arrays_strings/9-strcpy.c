@@ -13,3 +13,4 @@ char *_strcopy(char *dest, char *src)
 	while (*src)
 		*dest++ = *src++;
 	return (holder);
+}
