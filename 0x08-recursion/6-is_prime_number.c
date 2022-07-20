@@ -1,4 +1,5 @@
 #include "main.h"
+int is_divisible(int num, int div);
 
 /**
  * is_prime_number - A function that checks if a number
