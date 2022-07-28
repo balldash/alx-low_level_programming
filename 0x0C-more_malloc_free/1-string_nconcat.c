@@ -1,8 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
 
-int _strlen(char *string);
-
 /**
  * string_nconcat - a function that concatenates two strings
  * @s1: an input pointer of the first string
@@ -13,46 +11,31 @@ int _strlen(char *string);
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *ptr;
-	int num, len, i, j;
-
-	num = n;
+	char *new_str;
+	unsigned int i = 0, lens1 = 0, lens2 = 0;
 
 	if (s1 == NULL)
 		s1 = "";
+	while (s1[lens1])
+		lens1++;
 	if (s2 == NULL)
 		s2 = "";
-	if (num < 0)
-		return (NULL);
-	if (num >= _strlen(s2))
-		num = _strlen(s2);
+	while (s2[lens2])
+		lens2++;
+	if (n >= lens2)
+		n = lens2;
 
-	len = _strlen(s1) + num + 1;
-
-	ptr = malloc(sizeof(*ptr) * len);
-	if (ptr == NULL)
+	new_str = malloc(lens1 + n + 1);
+	if (new_str == NULL)
 		return (NULL);
 
-	for (i = 0; s1[i] != '\0'; i++)
-		ptr[i], s1[i];
-	for (j = 0; j < num; j++)
-		ptr[i + j] = s2[j];
-	ptr[i + j] = '\0';
-
-	return (ptr);
-}
-
-/**
- * _strlen - calculate and return string length
- * @string: the string
- * Return: string length
- */
-
-int _strlen(char *string)
-{
-	int len = 0;
-
-	while (string[len] != '\0')
-		len++;
-	return (len);
+	for (; i < (lens1 + n); i++)
+	{
+		if (i < lens1)
+			new_str[i] = *s1, s1++;
+		else
+			new_str[i] = *s2, s2++;
+	}
+	new_str[i] = '\0';
+	return (new_str);
 }
