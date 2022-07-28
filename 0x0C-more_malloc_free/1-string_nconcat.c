@@ -48,9 +48,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 int _strlen(char *string)
 {
-	int i;
+	int len = 0;
 
-	for (i = 0; string[i] != '\0'; i++)
-		;
-	return (i);
+	while (string[len] != '\0')
+		len++;
+	return (len);
 }
