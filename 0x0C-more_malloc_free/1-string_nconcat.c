@@ -1,6 +1,8 @@
 #include "main.h"
 #include <stdlib.h>
 
+int _strlen(char *string);
+
 /**
  * string_nconcat - a function that concatenates two strings
  * @s1: an input pointer of the first string
