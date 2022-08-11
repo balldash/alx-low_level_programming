@@ -1,6 +1,9 @@
-#ifndef _LISTS_H_
-#define _LISTS_H_
+#ifndef LISTS_H
+#define LISTS_H
+
 #include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 
 /**
  * struct list_s - singly linked list
@@ -24,4 +27,3 @@ size_t list_len_recursion(const list_t *h);
 list_t *add_node(list **head, const char *str);
 list_t *add_node_end(list_t **head, const char *str);
 void free_list(list_t *head);
-#endif
