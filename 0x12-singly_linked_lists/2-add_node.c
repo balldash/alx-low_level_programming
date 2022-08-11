@@ -1,5 +1,4 @@
 #include "lists.h"
-#include <string.h>
 
 /**
  * add_node - adds a node to the head of the linked list
@@ -10,19 +9,40 @@
 
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t *temp;
-	int length = 0;
+	list_t *new_node;
 
-	temp = malloc(sizeof(list_t));
-	if (temp == NULL)
+	if (str == NULL)
+		return (NULL);
+	if (strdup(str) == NULL)
+		return (NULL);
+	new_node = malloc(sizeof(list_t));
+	if (new_node == NULL)
 		return (NULL);
 
-	while (str[length])
-		length++;
+	new_node->str = strdup(str);
+	new_node->len = _strlen(str);
 
-	temp->len = length;
-	temp->str = strdup(str);
-	temp->next = *head;
-	*head = temp;
-	return (temp);
+	if (head == NULL)
+		new_node->next = NULL;
+	else
+		new_node->next = *head;
+
+	*head = new_node;
+
+	return (new_node);
+}
+
+/**
+ * _strlen - get the length of the string
+ * @str: the string
+ * Return: the length
+ */
+
+int _strlen(const char *str)
+{
+	int len;
+
+	for (len = 0; str[len] != '\0'; len++)
+		;
+	return (len);
 }

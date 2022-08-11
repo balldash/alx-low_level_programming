@@ -1,5 +1,4 @@
 #include "lists.h"
-#include <stdio.h>
 
 /**
  * print_list - a function to print a linked list
@@ -9,18 +8,16 @@
 
 size_t print_list(const list_t *h)
 {
-	unsigned int nodes = 0;
+	size_t count = 0;
 
-	while (h)
+	while (h != NULL)
 	{
-		printf("[%u] ", h->len);
 		if (h->str == NULL)
-			printf("(nil)\n");
+			printf("[0] (nil)\n");
 		else
-			printf("%s\n", h->str);
-		
+			printf("[%d] %s\n", h->len, h->str);
+		count++;
 		h = h->next;
-		nodes++;
 	}
-	return (nodes);
+	return (count);
 }
