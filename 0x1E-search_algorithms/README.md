@@ -1,0 +1,1 @@
+Welcome to the Search Algorithms in C repository! This repository contains implementations of various search algorithms written in the C programming language. These algorithms are fundamental for understanding how data can be efficiently retrieved from different data structures.
